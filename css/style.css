@@ -1,1 +1,165 @@
-/* text */
+/* font-family: 'Inika', serif;
+font-family: 'Inter', sans-serif; */
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #636060;
+
+  background: #ffffff;
+}
+
+.container {
+  background-color: #EDF2EC;;
+}
+
+.header {
+  font-family: 'Inika', serif;
+  font-size: 16px;
+}
+
+.header__logo-link {
+  line-height: 21px;
+  color: #000000;
+
+  text-decoration: none;
+}
+
+/* .header__logo-text {
+  font-family: 'Inika', serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+} */
+
+.header__link {
+  line-height: 50px;
+  color: #010201;
+  text-decoration: none;
+}
+
+.header__link_active {
+  color: #E06733;
+}
+
+.welcome__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+  color: #717171;
+}
+
+.welcome__word_green {
+  color: #499A18;
+}
+
+.welcome__text {
+  line-height: 35px;
+  color: #636060;
+}
+
+.about__title {
+  font-family: 'Inika', serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499A18;
+}
+
+.about__word_orange {
+  color: #E06733;
+}
+
+.about__text {
+  line-height: 30px;
+}
+
+.service__title {
+  font-family: 'Inika';
+  /* font-weight: 400; */
+  font-size: 40px;
+  line-height: 52px;
+  color: #499A18;
+}
+
+.button_orange {
+  width: 160px;
+  height: 50px;
+  padding: 12px 40px;
+
+  border: 1px solid #E06733;
+  border-radius: 5px;
+
+  font-family: 'Inika';
+  font-size: 20px;
+  line-height: 26px;
+  color: #E06733;
+}
+
+.service__title-card {
+  font-weight: 700;
+  line-height: 20px;
+  color: #E06733;
+  }
+
+.service__text-card {
+  font-size: 16px;
+  line-height: 20px;
+  color: #717171;
+}
+
+.prices__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.prices__accourdion {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.prices__text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: right;
+  color: #000000;
+}
+
+.prices__button {
+  font-weight: 700;
+}
+
+.contacts__title {
+  font-family: 'Inika';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499A18;
+}
+
+.contacts__accourdion {
+  line-height: 40px;
+  color: #717171;
+}
+
+.footer__text_black {
+  line-height: 50px;
+  color: #000000;
+}
+
+.footer__copyright-link {
+  text-decoration: none;
+}
+
+.footer__rss-link {
+  text-decoration: none;
+}
+
+
+
