@@ -10,28 +10,54 @@ body {
   background: #ffffff;
 }
 
+
+
+
+
 .container {
-  background-color: #EDF2EC;;
+  background-color: #EDF2EC;
 }
 
+
+
+
+/* Хедер */
 .header {
+  width: 1440px;
+  margin: 0 auto;
+
   font-family: 'Inika', serif;
   font-size: 16px;
 }
 
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 1220px;
+  padding: 42px 110px;
+}
+
 .header__logo-link {
+  display: flex;
+  align-items: center;
+
   line-height: 21px;
   color: #000000;
 
   text-decoration: none;
 }
 
-/* .header__logo-text {
-  font-family: 'Inika', serif;
-  font-size: 16px;
-  line-height: 21px;
-  color: #000000;
-} */
+.header__list {
+  display: flex;
+}
+
+.header__item {
+  margin-right: 46px;
+}
+
+.header__item:last-child {
+  margin-right: 0;
+}
 
 .header__link {
   line-height: 50px;
@@ -43,7 +69,33 @@ body {
   color: #E06733;
 }
 
+
+
+
+/* Первая секция hero */
+.welcome {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 93px;
+  padding: 62px 109px;
+}
+
+.welcome__img {
+  width: 450px;
+  margin-right: 225px;
+}
+
+.welcome__column-wrapper {
+  width: 549px;
+  margin-top: 36px;
+}
+
 .welcome__title {
+  margin: 0;
+  margin-bottom: 42px;
+
   font-weight: 700;
   font-size: 45px;
   line-height: 50px;
@@ -55,11 +107,47 @@ body {
 }
 
 .welcome__text {
+  margin-bottom: 48px;
+
   line-height: 35px;
   color: #636060;
 }
 
+.welcome__button {
+  width: 159px;
+  height: 44px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  border: 2px solid #E06733;
+  border-radius: 10px;
+
+  background-color: #EDF2EC;
+}
+
+
+
+
+/* Вторая секция */
+.about {
+  display: flex;
+  align-items: center;
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 94px;
+}
+
+.about__column-wrapper {
+  margin-right: 153px;
+}
+
 .about__title {
+  width: 463px;
+  margin: 0;
+  margin-bottom: 40px;
+
   font-family: 'Inika', serif;
   font-weight: 400;
   font-size: 40px;
@@ -72,15 +160,43 @@ body {
 }
 
 .about__text {
+  width: 608px;
   line-height: 30px;
 }
 
+
+
+
+/* Третья секция сервисы*/
+
+.service {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 40px 109px 121px;
+}
+
+.service__title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
 .service__title {
+  width: 306px;
+  margin: 0;
+  margin-right: 142px;
+
   font-family: 'Inika';
   /* font-weight: 400; */
   font-size: 40px;
   line-height: 52px;
   color: #499A18;
+}
+
+.service__list {
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
 }
 
 .button_orange {
@@ -95,13 +211,35 @@ body {
   font-size: 20px;
   line-height: 26px;
   color: #E06733;
+
+  background-color: #EDF2EC;
+}
+
+/* .service__gallery-wrapper {
+  display: grid;
+  grid-template-columns: 330px 330px 330px;
+  row-gap: 116px;
+  column-gap: 55px;
+} */
+
+
+.service__gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 116px;
+  row-gap: 55px;
+}
+
+.service__gallery-card {
+  width: 330px;
+  margin: 0;
 }
 
 .service__title-card {
   font-weight: 700;
   line-height: 20px;
   color: #E06733;
-  }
+}
 
 .service__text-card {
   font-size: 16px;
@@ -109,6 +247,10 @@ body {
   color: #717171;
 }
 
+
+
+
+/* Четвертая секция цены*/
 .prices__title {
   font-weight: 700;
   font-size: 40px;
@@ -160,6 +302,3 @@ body {
 .footer__rss-link {
   text-decoration: none;
 }
-
-
-
