@@ -1,2 +1,2 @@
-# flowers
-html, css, reset.css, adaptive layout, BEM naming, js
+# flowers  
+https://ivanfilippovw.github.io/flowers/
