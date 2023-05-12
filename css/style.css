@@ -1,6 +1,12 @@
 /* font-family: 'Inika', serif;
 font-family: 'Inter', sans-serif; */
 
+/* test text */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
 
@@ -66,6 +72,16 @@ body {
   line-height: 50px;
   color: #010201;
   text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__link:hover {
+  color: #E06733;
+}
+
+.header__link:active {
+  opacity: 0.5;
 }
 
 .header__link_active {
@@ -107,7 +123,7 @@ body {
   color: #717171;
 }
 
-.welcome__word_green {
+.word_green {
   color: #499A18;
 }
 
@@ -130,9 +146,18 @@ body {
   border-radius: 10px;
 
   background-color: #EDF2EC;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
+.welcome__button:hover {
+  color: white;
+  background: #E06733;
+}
 
+.welcome__button:active {
+  opacity: 0.5;
+}
 
 
 
@@ -225,6 +250,17 @@ body {
   border-radius: 5px;
 
   background-color: #EDF2EC;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button_orange:hover {
+  color: white;
+  background: #E06733;
+}
+
+.button_orange:active {
+  opacity: 0.5;
 }
 
 .service__gallery-wrapper {
@@ -240,6 +276,12 @@ body {
   padding: 0;
 
   background-color: #EDF2EC;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.service__gallery-card:hover {
+  opacity: 0.9;
 }
 
 .service__img-card {
@@ -293,7 +335,7 @@ body {
 
 .prices__title {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 
   font-weight: 700;
   font-size: 40px;
@@ -302,14 +344,48 @@ body {
 }
 
 .prices__tariffs {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
   width: 332px;
+  padding: 34px 41px;
+
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+}
+
+.prices__tariffs-containers {
+  display: flex;
+  padding: 16px 40px;
+
+  background: #EDF2EC;
+  border-radius: 20px;
 }
 
 .prices__accourdion {
+  width: 250px;
+
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: #000000;
+}
+
+.prices__accourdion-link {
+  /* display: block; */
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.prices__accourdion-link:hover {
+  opacity: 0.7;
+}
+
+.prices__accourdion-img {
+  display: block;
 }
 
 .prices__text {
@@ -326,19 +402,19 @@ body {
 
 .prices__button {
   display: block;
-  width: 160px;
-  height: 50px;
+  /* width: 160px;
+  height: 50px; */
   margin-left: auto;
   margin-bottom: 39px;
 
-  border: 1px solid #E06733;
+  /* /* border: 1px solid #E06733;
   border-radius: 5px;
 
   font-family: 'Inika';
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: #E06733;
+  color: #E06733; */
 
   background-color: #fff;
 }
@@ -357,9 +433,11 @@ body {
 
 .contacts {
   display: flex;
+  /* Почему не работае space-between?? devtools ссылается на свойство дисплей родителя, менял у контейнера обертки, но не помогло, хотя по тому же дев тулс стоит дисплей флекс... */
+  justify-self: space-between;
   width: 1220px;
   margin: 0 auto;
-  padding: 53px 110px 0;
+  padding: 53px 109px 0;
 }
 
 .contacts__img {
@@ -368,6 +446,8 @@ body {
 }
 
 .contacts__title {
+  display: block;
+  width: 195px;
   margin: 0;
   margin-right: 64px;
   margin-top: 7px;
@@ -379,11 +459,39 @@ body {
   color: #499A18;
 }
 
-.contacts__accourdion {
-  padding-top: 88px;
-  
+.contacts__accourdion-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  height: 50px;
+  margin-top: 96px;
+  padding: 0 35px 0 20px;
+
+  background: #D6E7D2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+}
+
+.contacts__accourdion-text {
+  font-size: 20px;
   line-height: 40px;
   color: #717171;
+}
+
+.contacts__accourdion-link {
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contacts__accourdion-link:hover {
+  opacity: 0.7;
+}
+
+.contacts__accourdion-img {
+  display: block;
 }
 
 
@@ -399,6 +507,16 @@ body {
   width: 1220px;
   margin: 0 auto;
   padding: 40px 110px;
+}
+
+.footer a:hover {
+  color: #E06733;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.footer a:active {
+  opacity: 0.5;
 }
 
 .footer__copyright-wrapper {
