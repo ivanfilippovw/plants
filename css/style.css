@@ -26,10 +26,6 @@ body {
 	padding-right: 110px;
 }
 
-.container-flex {
-  display: flex;
-}
-
 
 
 
@@ -49,11 +45,9 @@ body {
 .header__navigation {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1220px;
 }
 
-.header__logo-link {
+.header__logo {
   display: flex;
   align-items: center;
 
@@ -61,8 +55,14 @@ body {
   text-decoration: none;
 }
 
+.logo__icon {
+  padding-bottom: 10px;
+}
+
 .header__list {
   display: flex;
+  padding-top: 14px;
+  padding-bottom: 12px;
 }
 
 .header__item {
@@ -76,10 +76,9 @@ body {
 .header__link {
   padding-top: 15px;
   padding-bottom: 15px;
-  line-height: 3.12;
   color: #010201;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -109,6 +108,10 @@ body {
   background-color: #EDF2EC;
 }
 
+.welcome__inner {
+  display: flex;
+}
+
 .welcome__img {
   width: 100%;
   max-width: 450px;
@@ -116,10 +119,9 @@ body {
 }
 
 .welcome__column-wrapper {
+  align-self: center;
   width: 100%;
   max-width: 549px;
-  /* margin-top: 36px; */
-  align-self: center;
 }
 
 .welcome__title {
@@ -132,7 +134,7 @@ body {
   color: #717171;
 }
 
-.word_green {
+.welcome__title span {
   color: #499A18;
 }
 
@@ -140,7 +142,6 @@ body {
   margin-bottom: 48px;
 
   line-height: 1.75;
-  color: #636060;
 }
 
 .welcome__button {
@@ -156,7 +157,7 @@ body {
   border-radius: 10px;
 
   background-color: #EDF2EC;
-  transition: 0.5s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -171,9 +172,12 @@ body {
 
 
 
+
+
 /* Cекция "О нас"*/
 
 .about {
+  display: flex;
   margin-bottom: 94px;
 }
 
@@ -197,14 +201,11 @@ body {
   color: #499A18;
 }
 
-.about__word_orange {
+.about__title span {
   color: #E06733;
 }
 
 .about__text {
-  width: 100%;
-  max-width: 608px;
-
   line-height: 1.5;
 }
 
@@ -266,7 +267,7 @@ body {
   border-radius: 5px;
 
   background-color: #EDF2EC;
-  transition: 0.5s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -282,6 +283,10 @@ body {
 .service__gallery-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  /* TODO */
+  /* https://tppr.me/uv0wn - любые значения горизонтальных отступов (будь то margin, будь то padding или же column-gap) в пикселях больше, чем 100, должны у тебя вызывать сомнения и вопрос “а так точно нормально?”. В большинстве случаев можно сделать лучше - применить относительные единицы измерения: %, vw или же вообще по-красоте через CSS-функции min (https://doka.guide/css/min/), max (https://doka.guide/css/max/) или clamp (https://webref.ru/css/value/clamp). */
+
   column-gap: 116px;
   row-gap: 55px;
 }
@@ -294,7 +299,7 @@ body {
   padding: 0;
 
   background-color: #EDF2EC;
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -313,6 +318,8 @@ body {
 .service__gallert-text-wrap {
   padding-top: 10px;
   padding-bottom: 36px;
+  padding-right: 15px;
+  padding-left: 15px;
 
   border: 1px solid #E3E1D5;
   border-radius: 0px 0px 20px 20px;
@@ -346,10 +353,8 @@ body {
 .prices {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 40px 110px 115px;
+  padding-top: 40px;
+  padding-bottom: 115px;
 }
 
 .prices__title {
@@ -399,7 +404,7 @@ body {
 
 .prices__accourdion-link {
   /* display: block; */
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -413,7 +418,7 @@ body {
 
 .prices__text {
   width: 100%;
-  max-width: 452px;
+  max-width: 456px;
   margin-bottom: 38px;
 
   font-weight: 700;
@@ -422,6 +427,10 @@ body {
   color: #000000;
 
   text-align: right;
+}
+
+.prices__text span {
+  color: #499A18;
 }
 
 .prices__button {
@@ -459,22 +468,31 @@ body {
 /* Cекция Контакты */
 
 .contacts {
+  height: 497px;
   padding-top: 53px;
   background-color: #EDF2EC;
+  background-image: url('../assets/img/contact-woman.png');
+  background-position: 109px bottom;
+  background-repeat: no-repeat;
 }
 
-.contacts__img {
+.contacts__inner {
+  /* display: flex; */
+}
+
+/* .contacts__img {
   width: 100%;
   max-width: 400px;
   margin-right: 113px;
-}
+} */
 
 .contacts__title {
   display: block;
-  width: 100%;
+  text-align: center;
+  /* width: 100%;
   max-width: 195px;
   margin: 0;
-  margin-right: 64px;
+  margin-right: 64px; */
   padding-top: 7px;
 
   font-family: 'Inika';
@@ -492,7 +510,8 @@ body {
   width: 100%;
   max-width: 450px;
   height: 50px;
-  margin-top: 96px;
+  margin-top: 36px;
+  margin-left: auto;
   padding-right: 35px;
   padding-left: 20px;
 
@@ -509,7 +528,7 @@ body {
 
 .contacts__accourdion-link {
   display: block;
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -531,16 +550,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  width: 100%;
-  max-width: 1220px;
-	margin-left: auto;
-	margin-right: auto;
-  padding: 40px 110px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .footer a:hover {
   color: #E06733;
-  transition: 0.5s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -582,4 +598,9 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 188px;
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
 }
