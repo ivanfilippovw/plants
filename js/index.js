@@ -36,3 +36,9 @@ cсылки в футере при нажатии на них ведут на г
 обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5
 
 `);
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("hamburger__button").addEventListener("click", function() {
+    document.querySelector("header").classList.toggle("open")
+  })
+})
