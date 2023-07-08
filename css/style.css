@@ -5,8 +5,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 body {
   box-sizing: border-box;
 
@@ -18,6 +16,12 @@ body {
   background-color: #ffffff;
 }
 
+.body-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .container {
   box-sizing: border-box;
   width: 100%;
@@ -27,10 +31,6 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
-
-
-
-
 
 /* Хедер */
 
@@ -65,14 +65,7 @@ body {
   display: flex;
   padding-top: 14px;
   padding-bottom: 12px;
-}
-
-.header__item {
-  margin-right: 46px;
-}
-
-.header__item:last-child {
-  margin-right: 0;
+  gap: 46px;
 }
 
 .header__link {
@@ -138,16 +131,16 @@ body {
   transform: translateY(12px);
 }
 
-.header.open .hamburger__line:nth-child(2),
-.header.open .hamburger__line:nth-child(3) {
+body.open .hamburger__line:nth-child(2),
+body.open .hamburger__line:nth-child(3) {
   opacity: 0;
 }
 
-.header.open .hamburger__line:nth-child(1) {
+body.open .hamburger__line:nth-child(1) {
   transform: translateY(0) rotate(-45deg);
 }
 
-.header.open .hamburger__line:nth-child(4) {
+body.open .hamburger__line:nth-child(4) {
   transform: translateY(0) rotate(45deg);
 }
 
@@ -202,10 +195,10 @@ body {
 }
 
 .welcome__button {
-  width: 100%;
-  max-width: 159px;
+  display: flex;
+  align-items: center;
   height: 44px;
-
+  padding: 14px 24px;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -283,6 +276,7 @@ body {
 
 .service__title-wrapper {
   display: flex;
+  align-items: center;
   margin-bottom: 80px;
 }
 
@@ -304,7 +298,6 @@ body {
   width: 100%;
   max-width: 560px;
   gap: 38px;
-  padding-top: 29px;
 }
 
 .button_orange {
@@ -465,17 +458,25 @@ body {
   display: block;
 }
 
+.prices__column-wrapper:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
 .prices__text {
   width: 100%;
   max-width: 456px;
-  margin-bottom: 38px;
 
   font-weight: 700;
   font-size: 40px;
   line-height: 1.25;
   color: #000000;
+}
 
-  text-align: right;
+.prices__text:not(:last-child) {
+  margin-bottom: 38px;
 }
 
 .prices__text span {
@@ -484,7 +485,6 @@ body {
 
 .prices__button {
   display: block;
-  margin-left: auto;
   margin-bottom: 39px;
 
   font-weight: 700;
@@ -496,7 +496,6 @@ body {
   display: block;
   width: 100%;
   max-width: 152px;
-  margin-left: auto;
 }
 
 
@@ -634,6 +633,15 @@ body {
   align-items: center;
 }
 
+.footer__icon:hover {
+  fill: #E06733;
+  transition: 0.2s;
+}
+
+.footer__icon:active {
+  opacity: 0.5;
+}
+
 /* tablet 1280 */
 
 @media (max-width: 1280px) {
@@ -768,6 +776,10 @@ body {
     padding-bottom: 70px;
   }
 
+  .service__title-wrapper {
+    align-items: start;
+  }
+
   .service__title {
     font-size: 35px;
   }
@@ -810,9 +822,12 @@ body {
   }
 
   .prices__text {
-    margin-bottom: 28px;
     font-size: 25px;
     line-height: 35px;
+  }
+
+  .prices__text:not(:last-child) {
+    margin-bottom: 28px;
   }
 
   .prices__button {
@@ -876,22 +891,22 @@ body {
     display: none;
   }
 
-  .header.open .header__list {
-    transform: translateX(100%);
+  .body-wrapper.open .header__list {
+    transform: translateX(-100%);
   }
 
   .header__list {
     box-sizing: border-box;
     position: absolute;
     top: 0;
-    left: -640px;
+    right: -320px;
     display: flex;
     flex-direction: column;
-    align-items: end;
-    width: 100%;
+    gap: 0;
+    width: 320px;
     padding: 96px 20px 20px 20px;
-    background: #EDF2EC;
-    transition: transform 0.5s;
+    background-color: #EDF2EC;
+    transition: transform 0.3s;
   }
 
   .header__item {
@@ -990,24 +1005,6 @@ body {
   .header {
     padding-top: 34px;
     padding-bottom: 32px;
-  }
-
-  .header.open .header__list {
-    transform: translateX(100%);
-  }
-
-  .header__list {
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: -380px;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    width: 100%;
-    padding: 96px 20px 20px 20px;
-    background: #EDF2EC;
-    transition: transform 0.5s;
   }
 
   .header__item {
