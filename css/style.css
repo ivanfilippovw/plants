@@ -32,8 +32,7 @@ body {
   padding-left: 15px;
 }
 
-/* Хедер */
-
+/* Header */
 .header {
   padding-top: 42px;
   padding-bottom: 42px;
@@ -89,12 +88,6 @@ body {
   color: #E06733;
 }
 
-/* .hamburger {
-  display: none;
-  width: 40px;
-  height: 24px;
-} */
-
 .hamburger {
   position: relative;
   z-index: 2;
@@ -144,12 +137,7 @@ body.open .hamburger__line:nth-child(4) {
   transform: translateY(0) rotate(45deg);
 }
 
-
-
-
-
-/* Cекция hero */
-
+/* section Hero */
 .welcome {
   margin-bottom: 93px;
   padding-top: 62px;
@@ -220,12 +208,7 @@ body.open .hamburger__line:nth-child(4) {
   opacity: 0.5;
 }
 
-
-
-
-
-/* Cекция "О нас"*/
-
+/* section About */
 .about {
   display: flex;
   justify-content: space-between;
@@ -260,12 +243,7 @@ body.open .hamburger__line:nth-child(4) {
   line-height: 1.5;
 }
 
-
-
-
-
-/* Секция сервисы*/
-
+/* section Service */
 .service {
 
   padding-top: 40px;
@@ -327,14 +305,9 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 .service__gallery-wrapper {
-
-  /* TODO */
-  /* https://tppr.me/uv0wn - любые значения горизонтальных отступов (будь то margin, будь то padding или же column-gap) в пикселях больше, чем 100, должны у тебя вызывать сомнения и вопрос “а так точно нормально?”. В большинстве случаев можно сделать лучше - применить относительные единицы измерения: %, vw или же вообще по-красоте через CSS-функции min (https://doka.guide/css/min/), max (https://doka.guide/css/max/) или clamp (https://webref.ru/css/value/clamp). */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   column-gap: 115px;
   row-gap: 55px;
 }
@@ -344,10 +317,11 @@ body.open .hamburger__line:nth-child(4) {
   max-width: 330px;
   margin: 0;
   padding: 0;
-
   background-color: #EDF2EC;
+  border-radius: 20px;
   transition: 0.2s;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .service__gallery-card:hover {
@@ -358,8 +332,6 @@ body.open .hamburger__line:nth-child(4) {
   display: block;
   margin: 0;
   padding: 0;
-
-  border-radius: 20px 20px 0px 0px;
 }
 
 .service__gallery-text-wrap {
@@ -367,9 +339,9 @@ body.open .hamburger__line:nth-child(4) {
   padding-bottom: 36px;
   padding-right: 15px;
   padding-left: 15px;
-
   border: 1px solid #E3E1D5;
-  border-radius: 0px 0px 20px 20px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .service__title-card {
@@ -391,11 +363,7 @@ body.open .hamburger__line:nth-child(4) {
   text-align: center;
 }
 
-
-
-
-
-/* Cекция цены*/
+/* section Prices */
 
 .prices {
   display: flex;
@@ -420,11 +388,9 @@ body.open .hamburger__line:nth-child(4) {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
-
   width: 100%;
   max-width: 332px;
   padding: 34px 41px;
-
   border: 1px solid #E3E1D5;
   border-radius: 20px;
 }
@@ -432,7 +398,6 @@ body.open .hamburger__line:nth-child(4) {
 .prices__tariffs-containers {
   display: flex;
   padding: 15px 40px;
-
   background-color: #EDF2EC;
   border-radius: 20px;
 }
@@ -498,12 +463,7 @@ body.open .hamburger__line:nth-child(4) {
   max-width: 152px;
 }
 
-
-
-
-
-/* Cекция Контакты */
-
+/* section Contacts */
 .contacts {
   padding-top: 60px;
   background-color: #EDF2EC;
@@ -570,12 +530,7 @@ body.open .hamburger__line:nth-child(4) {
   display: block;
 }
 
-
-
-
-
-/* Хедер */
-
+/* Header */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -643,7 +598,6 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 /* tablet 1280 */
-
 @media (max-width: 1280px) {
 
   .contacts__accourdion-container {
@@ -653,7 +607,6 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 /* tablet 1024 */
-
 @media (max-width: 1024px) {
 
   .contacts__accourdion-container {
@@ -663,7 +616,6 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 /* tablet 920 */
-
 @media (max-width: 920px) {
 
   .contacts__accourdion-container {
@@ -672,14 +624,12 @@ body.open .hamburger__line:nth-child(4) {
 
   .service__title-wrapper {
     display: flex;
-    flex-direction: column;
     margin-bottom: 40px;
   }
 
 }
 
 /* tablet 860 */
-
 @media (max-width: 860px) {
 
   .contacts__title {
@@ -689,7 +639,6 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 /* tablet 768 */
-
 @media (max-width: 768px) {
   .container {
     width: 100%;
@@ -777,6 +726,7 @@ body.open .hamburger__line:nth-child(4) {
   }
 
   .service__title-wrapper {
+    flex-direction: column;
     align-items: start;
   }
 
@@ -884,7 +834,6 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 /* mobile 640 */
-
 @media (max-width: 640px) {
 
   .header__list {
@@ -962,7 +911,6 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 /* mobile 480 */
-
 @media (max-width: 480px) {
 
   .welcome__inner {
@@ -994,7 +942,6 @@ body.open .hamburger__line:nth-child(4) {
 }
 
 /* mobile 380 */
-
 @media (max-width: 380px) {
 
   .container {
@@ -1028,7 +975,7 @@ body.open .hamburger__line:nth-child(4) {
   .welcome {
     margin-bottom: 30px;
     padding-top: 24px;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
   }
 
   .welcome__title {
@@ -1038,13 +985,15 @@ body.open .hamburger__line:nth-child(4) {
   }
 
   .welcome__text {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
 
   .welcome__button {
+    justify-content: center;
     width: 100%;
     max-width: 100px;
     height: 34px;
+    padding: 0;
     font-size: 10px;
     line-height: 2;
   }
@@ -1138,6 +1087,10 @@ body.open .hamburger__line:nth-child(4) {
     line-height: 1.75;
   }
 
+  .prices__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   .prices__img {
     display: none;
   }
@@ -1172,9 +1125,11 @@ body.open .hamburger__line:nth-child(4) {
 
   .footer {
     padding-top: 22px;
+    padding-bottom: 10px;
   }
 
   .footer__rss-link {
     margin-bottom: 0;
+    line-height: 2.7;
   }
 }
