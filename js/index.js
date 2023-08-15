@@ -20,3 +20,9 @@ document.body.addEventListener('click', event => {
   if (event._isClickWithInMenu) return;
   document.querySelector(".body-wrapper").classList.remove("open")
 });
+
+document.querySelectorAll('.header__link').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.body-wrapper').classList.remove('open');
+  });
+});

@@ -124,16 +124,16 @@ body {
   transform: translateY(12px);
 }
 
-body.open .hamburger__line:nth-child(2),
-body.open .hamburger__line:nth-child(3) {
+.body-wrapper.open .hamburger__line:nth-child(2),
+.body-wrapper.open .hamburger__line:nth-child(3) {
   opacity: 0;
 }
 
-body.open .hamburger__line:nth-child(1) {
+.body-wrapper.open .hamburger__line:nth-child(1) {
   transform: translateY(0) rotate(-45deg);
 }
 
-body.open .hamburger__line:nth-child(4) {
+.body-wrapper.open .hamburger__line:nth-child(4) {
   transform: translateY(0) rotate(45deg);
 }
 
@@ -848,11 +848,11 @@ body.open .hamburger__line:nth-child(4) {
     box-sizing: border-box;
     position: absolute;
     top: 0;
-    right: -320px;
+    right: -100%;
     display: flex;
     flex-direction: column;
     gap: 0;
-    width: 320px;
+    width: 100%;
     padding: 96px 20px 20px 20px;
     background-color: #EDF2EC;
     transition: transform 0.3s;
